@@ -2,11 +2,13 @@ import sys
 import pygame
 from settings import Settings
 from ship import Ship
+import game_functions as gf
+
 
 def run_game():
     #inicializa o jogo e cria um objeto na tela
-    pygame.init()
-    ai_settings = Settings()
+    pygame.init() #inicia as configurações que o pýgame precisa
+    ai_settings = Settings() #cria  janela screen
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion - by Rodrigo Abreu")
 
@@ -18,7 +20,9 @@ def run_game():
 
     #inicia o laço principal do jogo
     while True:
-        #Observa evento do teclado e de mouse
+        gf.check_events()
+        gf.update_screen(ai_settings, screen, ship)
+        """#Observa evento do teclado e de mouse
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -28,10 +32,7 @@ def run_game():
         ship.blitme()
 
         #deixa a tela mais recente visivel
-        pygame.display.flip()
-
-
-
-
-
+        pygame.display.flip()"""
+        
+        
 run_game()
