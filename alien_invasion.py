@@ -20,7 +20,7 @@ def run_game():
 
     #inicia o laço principal do jogo
     while True:
-        gf.check_events()
+        gf.check_events(ship)
         gf.update_screen(ai_settings, screen, ship)
         """#Observa evento do teclado e de mouse
         for event in pygame.event.get():
