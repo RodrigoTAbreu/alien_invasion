@@ -11,9 +11,13 @@ def check_events(ship):
                 #move a espaçonave para a direita
                 #ship.rect.centerx +=1 #soma mais um na posição atual
                 ship.moving_right = True #altera a situação de moving_right para TRUE
+            elif event.key == pygame.K_LEFT:
+                ship.moving_left = True
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_RIGHT:
                 ship.moving_right = False
+            elif event.key == pygame.K_LEFT:
+                ship.moving_left = False
                 
             
     
