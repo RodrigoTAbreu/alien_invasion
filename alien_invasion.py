@@ -13,7 +13,7 @@ def run_game():
     pygame.display.set_caption("Alien Invasion - by Rodrigo Abreu")
 
     #Cria uma espaçonave
-    ship = Ship(screen)
+    ship = Ship(ai_settings, screen)
 
     # Define uma cor de fundo
     bg_color = (32,124,229,1)
